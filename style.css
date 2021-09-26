@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.grid-container{
+    width: 30%;
+    height: 512px;
+    margin: 10% 23% 6% 24%;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+}
+
+.calc_display{
+    width: 100%;
+    height:30%;
+    padding: 0.75rem 1rem;
+    background-color: rgb(39, 39, 39);
+    color:honeydew;
+    text-align: right;
+    font-size: 600%;
+}
+
+.calc_keys{
+    background: rgb(77, 77, 77);
+    display: grid;
+    height:70%;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4,auto);
+    grid-template-areas:
+                            ". . . . "
+                            "seven eight nine equal"
+                            "four five six equal"
+                            "one two three equal"
+                            "zero dot clear delete"
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.eight{
+    grid-area: eight;
+}
+
+.nine{
+    grid-area: nine;
+}
+
+.equal{
+    grid-area:equal;
+    background-color: rgb(255, 201, 130);
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area:five;
+}
+
+.six{
+    grid-area:six;
+}
+
+.one{
+    grid-area:one;
+}
+
+.two{
+    grid-area:two;
+}
+
+.three{
+    grid-area:three;
+}
+
+.dot{
+    grid-area:dot;
+    border-bottom-style: solid rgb(255, 255, 255);
+}
+
+.clear{
+    grid-area: clear;
+}
+
+.delete{
+    grid-area:delete;
+}
+
+[data-type = "number"]{
+    background-color: rgb(255, 253, 240);
+}
+
+[data-type = "operator"]:hover{
+    background:rgb(192, 192, 192);
+    cursor: pointer;
+}
+
+[data-type = "number"]:hover{
+    background: rgb(255, 248, 199);
+    cursor: pointer;
+}
+
+.equal:hover{
+    background: rgb(255, 180, 81);
+    cursor: pointer;
+}
+
+.calc_keys > button {
+    border: 0;
+}
+
+[data-type = "clear"]{
+    background-color: rgb(255, 253, 240);
+}
+
+[data-type = "clear"]:hover{
+    background: rgb(255, 248, 199);
+    cursor: pointer;
+}
+
+[data-type = "delete"]{
+    background-color: rgb(255, 253, 240);
+}
+
+[data-type = "delete"]:hover{
+    background: rgb(255, 248, 199);
+    cursor: pointer;
+}
